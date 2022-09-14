@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 void main(){
   List<String> nomes = ['Ana',
     'Maria',
@@ -43,4 +44,11 @@ void main(){
     'Carvalho',
     'Lopes',
     'Barbosa'];
+  for (int i=0;i<10;i++){
+    final aleatorio = math.Random();
+    final nome = nomes[aleatorio.nextInt(nomes.length)];
+    final sobrenome = sobrenomes[aleatorio.nextInt(sobrenomes.length)];
+    final nomecompleto=("$nome $sobrenome");
+    print(nomecompleto);
+  }
 }
